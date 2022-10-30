@@ -1,3 +1,5 @@
+package For;
+
 import java.util.Scanner;
 
 public class LogicalOp {
@@ -93,55 +95,14 @@ public class LogicalOp {
         System.out.println("Exercitiul 8 \"FOR\":\n\tMedia numerelor de la numarul introdus \"" + firstnumber + "\" pana la 100 este: " + media);
     }
 
-
-    //Exercitiul 1 WHILE
-    public void unupanala100w() {
-        int i = firstnumber;
-        System.out.println("Exercitiul 1 \"WHILE\":\n\tAfisarea numerelor pare de la 1 pana la 100: ");
-        do {
-            System.out.println(i);
-            i++;
-        } while (i <= targetPlusNumber);
-    }
-
-    //Exercitiul 2 WHILE
-    public void unupanalaminus100w() {
-        int i = firstnumber;
-        System.out.println("Exercitiul 2 \"WHILE\":\n\tAfisarea numerelor de la numarul introdus \"" + firstnumber + "\" pana la -100 este: ");
-        do {
-            System.out.println(i);
-            i--;
-        } while (i >= targetMinusNumber);
-    }
-
-    //Exercitiul 3 WHILE
-    public void numereintrew() {
-        int i = firstnumber;
-        System.out.println("Exercitiul 3 \"WHILE\":\n\tAfisarea numerelor pare de la primul numar introdus \"" + firstnumber + "\" pana la al doilea numar introdus \"" + secondnumber + "\": ");
-       // while (i <= secondnumber) {
-          do{  System.out.println(firstnumber);
-            i--;
+    //Exercitiul 9 FOR
+    public void asterisk() {
+        System.out.println("Exercitiul 9 \"FOR\":");
+        for (int row = 1; row <= 7; row++) {
+            for (int col = 1; col <= 8 - row; col++) {
+                System.out.println("*");
+            }
+            System.out.println();
         }
-//        do {
-//
-//        }
-        while (i >= secondnumber); //{
-//            System.out.println(secondnumber);
-//            i++;
-        //}
-    }
-
-    //Exercitiul 4 WHILE
-    public void numereintremicmarew() {
-        int i = firstnumber;
-        System.out.println("Exercitiul 4 \"WHILE\":\n\tAfisarea numerelor de la primul numar introdus \"" + firstnumber + "\" pana la al doilea numar introdus \"" + secondnumber + "\": ");
-        do {
-            System.out.println(firstnumber);
-            i++;
-        } while (firstnumber <= secondnumber);
-        do {
-            System.out.println(i);
-            i++;
-        } while (firstnumber >= secondnumber);
     }
 }

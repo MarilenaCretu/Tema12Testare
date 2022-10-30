@@ -1,24 +1,18 @@
-package For;
-
-import For.LogicalOp;
+package While;
 
 public class Main {
     public static void main(String[] args) {
+        LogicalOpW logicalOpW = new LogicalOpW();
 
-        LogicalOp logicalOp = new LogicalOp();
-        logicalOp.getFirstnumber();
-//        logicalOp.printFromNumberToTarget1();
-//        logicalOp.printFromNumberToTarget2();
-        logicalOp.getAldoileanumar();
-//        logicalOp.numereintre();
-//        logicalOp.numereintremicmare();
-//  5      logicalOp.unupanala100par();
-//        logicalOp.unupanala100impar();
-//        logicalOp.adunarea();
-//        logicalOp.averageFromNumberTo100();
-       // logicalOp.unupanala100w();
-//logicalOp.unupanalaminus100w();
-//logicalOp.numereintrew();
- logicalOp.numereintremicmarew();
+        logicalOpW.getFirstnumber();
+        logicalOpW.unupanala100w();
+        logicalOpW.unupanalaminus100w();
+        logicalOpW.getAldoileanumar();
+        logicalOpW.numereintrew();
+        logicalOpW.numereintremicmarew();
+        logicalOpW.unupanala100parw();
+        logicalOpW.unupanalaminus100imparw();
+        logicalOpW.countnumerew();
+
     }
 }

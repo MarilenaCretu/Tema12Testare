@@ -2,11 +2,12 @@ package While;
 
 import java.util.Scanner;
 
-public class LogicalOp {
+public class LogicalOpW {
     int firstnumber;
     int targetPlusNumber = 100;
     int targetMinusNumber = -100;
     int secondnumber;
+    int i = 1;
 
     public void getFirstnumber() {
         Scanner s = new Scanner(System.in);
@@ -20,70 +21,11 @@ public class LogicalOp {
         int b = s.nextInt();
         return secondnumber = b;
     }
-//
-//    //Exercitiul 3 FOR
-//    public void numereintre() {
-//        System.out.println("Exercitiul 3 \"FOR\":\n\tAfisarea numerelor pare de la primul numar introdus \"" + firstnumber + "\" pana la al doilea numar introdus \"" + secondnumber + "\": ");
-//        for (int i = firstnumber; i <= secondnumber; i++) {
-//            System.out.println(i);
-//        }
-//        for (int i = firstnumber; i >= secondnumber; i--) {
-//            System.out.println(i);
-//        }
-//    }
-//
-//    //Exercitiul 4 FOR
-//    public void numereintremicmare() {
-//        System.out.println("Exercitiul 4 \"FOR\":\n\tAfisarea numerelor de la primul numar introdus \"" + firstnumber + "\" pana la al doilea numar introdus \"" + secondnumber + "\": ");
-//        for (int i = firstnumber; i <= secondnumber; i++) {
-//            System.out.println(i);
-//        }
-//        for (int j = secondnumber; j <= firstnumber; j++) {
-//            System.out.println(secondnumber++);
-//        }
-//    }
-//
-//    //Exercitiul 5 FOR
-//    public void unupanala100par() {
-//        System.out.println("Exercitiul 5 \"FOR\":\n\tAfisarea numerelor pare de la 1 pana la 100: ");
-//        for (int i = 1; i <= targetPlusNumber; i++)
-//            if (i % 2 == 0)
-//                System.out.println(i);
-//    }
-//
-//    //Exercitiul 6 FOR
-//    public void unupanala100impar() {
-//        System.out.println("Exercitiul 6 \"FOR\":\n\tAfisarea numerelor impare de la 1 pana la 100: ");
-//        for (int i = 1; i <= 100; i++)
-//            if (i % 2 != 0)
-//                System.out.println(i);
-//    }
-//
-//    //Exercitiul 7 FOR
-//    public void adunarea() {
-//        int result = 0;
-//        for (int i = firstnumber; i <= 100; i++) {
-//            result += i;
-//        }
-//        System.out.println("Exercitiul 7 \"FOR\":\n\tSuma numerelor de la numarul introdus \"" + firstnumber + "\" pana la 100 este: " + result);
-//    }
-//
-//    //Exercitiul 8 FOR
-//    public void averageFromNumberTo100() {
-//        int result = 0;
-//        double media = 0;
-//        for (int i = firstnumber; i <= targetPlusNumber; i++) {
-//            result += i;
-//            media = (double) result / 2;
-//        }
-//        System.out.println("Exercitiul 8 \"FOR\":\n\tMedia numerelor de la numarul introdus \"" + firstnumber + "\" pana la 100 este: " + media);
-//    }
-
 
     //Exercitiul 1 WHILE
     public void unupanala100w() {
         int i = firstnumber;
-        System.out.println("Exercitiul 1 \"WHILE\":\n\tAfisarea numerelor pare de la 1 pana la 100: ");
+        System.out.println("Exercitiul 1 \"WHILE\":\n\tAfisarea numerelor de la numarul introdus \"" + firstnumber + "\" pana la \"" + targetPlusNumber + "\":");
         do {
             System.out.println(i);
             i++;
@@ -93,7 +35,7 @@ public class LogicalOp {
     //Exercitiul 2 WHILE
     public void unupanalaminus100w() {
         int i = firstnumber;
-        System.out.println("Exercitiul 2 \"WHILE\":\n\tAfisarea numerelor de la numarul introdus \"" + firstnumber + "\" pana la -100 este: ");
+        System.out.println("Exercitiul 2 \"WHILE\":\n\tAfisarea numerelor de la numarul introdus \"" + firstnumber + "\" pana la \"" + targetMinusNumber + "\":");
         do {
             System.out.println(i);
             i--;
@@ -104,17 +46,14 @@ public class LogicalOp {
     public void numereintrew() {
         int i = firstnumber;
         System.out.println("Exercitiul 3 \"WHILE\":\n\tAfisarea numerelor pare de la primul numar introdus \"" + firstnumber + "\" pana la al doilea numar introdus \"" + secondnumber + "\": ");
-       // while (i <= secondnumber) {
-          do{  System.out.println(firstnumber);
+        do {
+            System.out.println(i);
+            i++;
+        } while (i <= secondnumber);
+        do {
+            System.out.println(i);
             i--;
-        }
-//        do {
-//
-//        }
-        while (i >= secondnumber); //{
-//            System.out.println(secondnumber);
-//            i++;
-        //}
+        } while (i >= secondnumber);
     }
 
     //Exercitiul 4 WHILE
@@ -122,12 +61,50 @@ public class LogicalOp {
         int i = firstnumber;
         System.out.println("Exercitiul 4 \"WHILE\":\n\tAfisarea numerelor de la primul numar introdus \"" + firstnumber + "\" pana la al doilea numar introdus \"" + secondnumber + "\": ");
         do {
-            System.out.println(firstnumber);
-            i++;
-        } while (firstnumber <= secondnumber);
-        do {
             System.out.println(i);
             i++;
-        } while (firstnumber >= secondnumber);
+        } while (i <= secondnumber);
+        do {
+            System.out.println(secondnumber);
+            i--;
+        } while (i >= secondnumber);
     }
+
+    //Exercitiul 5 WHILE
+    public void unupanala100parw() {
+        System.out.println("Exercitiul 5 \"WHILE\":\n\tAfisarea numerelor pare de la " + i + "\" pana la \"" + targetPlusNumber + "\":");
+        while (i <= targetPlusNumber) {
+            if (i % 2 == 0)
+                System.out.println(i);
+            i++;
+        }
+    }
+
+    //Exercitiul 6 WHILE
+    public void unupanalaminus100imparw() {
+        int i = 1;
+        System.out.println("Exercitiul 6 \"WHILE\":\n\tAfisarea numerelor impare de la " + i + "\" pana la \"" + targetPlusNumber + "\":");
+        while (i <= targetPlusNumber) {
+            System.out.println(i);
+            i = i + 2;
+        }
+    }
+
+    //Exercitiul 7 WHILE
+    public void countnumerew() {
+        int x = 111;
+        int z = 8899;
+        int result = 0;
+        int count = x;
+        double media = 0;
+        System.out.println("Exercitiul 7 \"WHILE\":\n\tAfisez media numerelor de la \"" + x + "\" pana la \"" + z + "\":");
+        while (count <= x) {
+            count++;
+            result += count;
+            media = (double) result / 2;
+        }
+        System.out.println(media);
+    }
+
+
 }
