@@ -106,6 +106,25 @@ public class LogicalOpW {
         System.out.println(media/100);
     }
 
+    //Exercitiul 8 WHILE
+    public void divizibilsapte() {
+        int x = firstnumber;
+        int z = secondnumber;
+        int result = 0;
+        int count = x;
+        double media = 0;
+        int b;
+        System.out.println("Exercitiul 8 \" WHILE\":\n\tMedia numerelor divizibile cu 7 pentru intervalul - primul numar introdus \"" + firstnumber + "\" pana la al doilea numar introdus \"" + secondnumber +"\" este: ");
+        while (count <= z) {
+                count++;
+            b=count%10;
+            if (count % 7 == 0)
+                result += count;
+            media = (double) result / 2;
+        }
+        System.out.println(media);
+    }
+
     //Exercitiul 9 WHILE
     public long primeleFibonacci() {
         int n = 1, n1 = 1, n2;
