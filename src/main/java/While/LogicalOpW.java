@@ -98,13 +98,26 @@ public class LogicalOpW {
         int count = x;
         double media = 0;
         System.out.println("Exercitiul 7 \"WHILE\":\n\tAfisez media numerelor de la \"" + x + "\" pana la \"" + z + "\":");
-        while (count <= x) {
+        while (count <= z) {
             count++;
             result += count;
             media = (double) result / 2;
         }
-        System.out.println(media);
+        System.out.println(media/100);
     }
 
+    //Exercitiul 9 WHILE
+    public long primeleFibonacci() {
+        int n = 1, n1 = 1, n2;
+        System.out.println("Exercitiul 8 \"WHILE\":\n\tPrimele 20 de numere din sirul lui Fibonacci:");
+        System.out.print(n + " " + n1 + " ");
+        for (int i = 0; i < 18; i++) {
+            n2 = n1 + n;
+            System.out.print(n2 + " ");
+            n = n1;
+            n1 = n2;
+        }
+        return n;
+    }
 
 }

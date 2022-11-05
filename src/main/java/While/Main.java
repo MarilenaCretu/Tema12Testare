@@ -13,6 +13,7 @@ public class Main {
         logicalOpW.unupanala100parw();
         logicalOpW.unupanalaminus100imparw();
         logicalOpW.countnumerew();
+        logicalOpW.primeleFibonacci();
 
     }
 }
