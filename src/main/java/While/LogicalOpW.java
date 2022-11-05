@@ -45,7 +45,7 @@ public class LogicalOpW {
     //Exercitiul 3 WHILE
     public void numereintrew() {
         int i = firstnumber;
-        System.out.println("Exercitiul 3 \"WHILE\":\n\tAfisarea numerelor pare de la primul numar introdus \"" + firstnumber + "\" pana la al doilea numar introdus \"" + secondnumber + "\": ");
+        System.out.println("Exercitiul 3 \"WHILE\":\n\tAfisarea numerelor de la primul numar introdus \"" + firstnumber + "\" pana la al doilea numar introdus \"" + secondnumber + "\": ");
         do {
             System.out.println(i);
             i++;
@@ -58,16 +58,18 @@ public class LogicalOpW {
 
     //Exercitiul 4 WHILE
     public void numereintremicmarew() {
-        int i = firstnumber;
         System.out.println("Exercitiul 4 \"WHILE\":\n\tAfisarea numerelor de la primul numar introdus \"" + firstnumber + "\" pana la al doilea numar introdus \"" + secondnumber + "\": ");
         do {
-            System.out.println(i);
-            i++;
-        } while (i <= secondnumber);
+            System.out.println(firstnumber);
+            firstnumber++;
+        }
+        while (firstnumber <= secondnumber);
+
         do {
             System.out.println(secondnumber);
-            i--;
-        } while (i >= secondnumber);
+            secondnumber++;
+        }
+        while (firstnumber >= secondnumber);
     }
 
     //Exercitiul 5 WHILE
@@ -103,21 +105,21 @@ public class LogicalOpW {
             result += count;
             media = (double) result / 2;
         }
-        System.out.println(media/100);
+        System.out.println(media / 100);
     }
 
     //Exercitiul 8 WHILE
     public void divizibilsapte() {
-        int x = firstnumber;
-        int z = secondnumber;
+        int x = 1;
+        int z = targetPlusNumber;
         int result = 0;
         int count = x;
         double media = 0;
         int b;
-        System.out.println("Exercitiul 8 \" WHILE\":\n\tMedia numerelor divizibile cu 7 pentru intervalul - primul numar introdus \"" + firstnumber + "\" pana la al doilea numar introdus \"" + secondnumber +"\" este: ");
+        System.out.println("Exercitiul 8 \" WHILE\":\n\tMedia numerelor divizibile cu 7 pentru intervalul - primul numar introdus \"" + firstnumber + "\" pana la \"" + targetPlusNumber + "\" este: ");
         while (count <= z) {
-                count++;
-            b=count%10;
+            count++;
+            b = count % 10;
             if (count % 7 == 0)
                 result += count;
             media = (double) result / 2;
@@ -139,4 +141,39 @@ public class LogicalOpW {
         return n;
     }
 
+    //Exercitiul 10 WHILE
+    public void CozaLozaWoza() {
+        int x = 1;
+        int z = 110;
+        String text3 = "Coza";
+        String text5 = "Loza";
+        String text7 = "Woza";
+        System.out.println("\nExercitiul 10 \" WHILE\":\n\tCreati o metoda numita CozaLozaWoza.Metoda va afisa:\n\t\t\t\t" +
+                "- numerele de la 1 la 110\n\t\t\t\t" +
+                "- 11 numere pe linie");
+        int factor1 = 1;
+        while (factor1 <= 10) {
+            if (x <= z) {
+                int factor2 = 1;
+            while (factor2 <= 11) {
+                System.out.print("\t" + x++);
+                factor2++;
+                    if (x % 3 == 0) {
+                        System.out.println(" " + text3);
+                        x++;
+                    }
+                    if (x % 5 == 0) {
+                        System.out.println(" " + text5);
+                        x++;
+                    }
+                    if (x % 7 == 0) {
+                        System.out.println(" " + text7);
+                        x++;
+                    }
+                }
+            }
+                System.out.println();
+                factor1++;
+        }
+    }
 }

@@ -15,6 +15,6 @@ public class Main {
         logicalOpW.countnumerew();
         logicalOpW.divizibilsapte();
         logicalOpW.primeleFibonacci();
-
+        logicalOpW.CozaLozaWoza();
     }
 }
