@@ -96,17 +96,19 @@ public class LogicalOpW {
     public void countnumerew() {
         int x = 111;
         int z = 8899;
-        int result = 0;
-        int count = x;
-        double media = 0;
+        int count = 0;
+        float sum=0;
+        double media=0;
         System.out.println("Exercitiul 7 \"WHILE\":\n\tAfisez media numerelor de la \"" + x + "\" pana la \"" + z + "\":");
-        while (count <= z) {
+        while (x <= z) {
+            sum += x;
             count++;
-            result += count;
-            media = (double) result / 2;
+           media = sum/count;
+       x++;
         }
-        System.out.println(media / 100);
+        System.out.println(media);
     }
+
 
     //Exercitiul 8 WHILE
     public void divizibilsapte() {
@@ -143,37 +145,33 @@ public class LogicalOpW {
 
     //Exercitiul 10 WHILE
     public void CozaLozaWoza() {
-        int x = 1;
-        int z = 110;
-        String text3 = "Coza";
-        String text5 = "Loza";
-        String text7 = "Woza";
         System.out.println("\nExercitiul 10 \" WHILE\":\n\tCreati o metoda numita CozaLozaWoza.Metoda va afisa:\n\t\t\t\t" +
                 "- numerele de la 1 la 110\n\t\t\t\t" +
                 "- 11 numere pe linie");
-        int factor1 = 1;
-        while (factor1 <= 10) {
-            if (x <= z) {
-                int factor2 = 1;
-            while (factor2 <= 11) {
-                System.out.print("\t" + x++);
-                factor2++;
-                    if (x % 3 == 0) {
-                        System.out.println(" " + text3);
-                        x++;
-                    }
-                    if (x % 5 == 0) {
-                        System.out.println(" " + text5);
-                        x++;
-                    }
-                    if (x % 7 == 0) {
-                        System.out.println(" " + text7);
-                        x++;
-                    }
-                }
+        int i = 1;
+        while (i <= 110) {
+            if (i % 3 == 0 && i % 5 == 0 && i % 7 == 0) {
+                System.out.print("CozaLozaWoza ");
+            } else if (i % 3 == 0 && i % 5 == 0) {
+                System.out.print("CozaLoza ");
+            } else if (i % 3 == 0 && i % 7 == 0) {
+                System.out.print("CozaWoza ");
+            } else if (i % 5 == 0 && i % 7 == 0) {
+                System.out.print("WozaLoza ");
+            } else if (i % 3 == 0) {
+                System.out.print("Coza ");
+            } else if (i % 5 == 0) {
+                System.out.print("Loza ");
+            } else if (i % 7 == 0) {
+                System.out.print("Woza ");
+            } else {
+                System.out.print(i + " ");
             }
+
+            if (i % 11 == 0) {
                 System.out.println();
-                factor1++;
+            }
+            i++;
         }
     }
 }
